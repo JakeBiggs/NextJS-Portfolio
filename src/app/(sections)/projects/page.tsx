@@ -4,6 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 interface Project {
     title: string;
     description: string;
@@ -15,13 +16,18 @@ interface Project {
 
 const Projects: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([]);
+    const [visibleProjects, setVisibleProjects] = useState<Project[]>([]);
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [showModal, setShowModal] = useState(false);
+    const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
         fetch('/projects.json')
             .then((response) => response.json())
-            .then((data) => setProjects(data))
+            .then((data) => {
+                setProjects(data);
+                setVisibleProjects(data.slice(0, 6)); // Show only the first 6 projects initially
+            })
             .catch((error) => console.error('Error fetching projects:', error));
     }, []);
 
@@ -39,15 +45,25 @@ const Projects: React.FC = () => {
         event.stopPropagation();
     };
 
+    const handleViewMore = () => {
+        setShowAll(true);
+        setVisibleProjects(projects);
+    };
+
+    const handleViewLess = () => {
+        setShowAll(false);
+        setVisibleProjects(projects.slice(0, 6));
+    };
+
     return (
         <section id="projects" className="bg-light-background_tertiary dark:bg-dark-background_tertiary p-8 text-light-text dark:text-dark-text">
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-4">Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
+                    {visibleProjects.map((project, index) => (
                         <div key={index} className="bg-light-background_secondary dark:bg-dark-background_secondary p-4 rounded-lg shadow-lg flex flex-col cursor-pointer" onClick={() => handleProjectClick(project)}>
                             <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                            <Carousel id={`carousel-${index}`} className="mb-4" onClick={stopPropagation}>
+                            <Carousel id={`carousel-${index}`} className="mb-4" onClick={stopPropagation} interval={null}>
                                 {project.images.map((image, imgIndex) => (
                                     <Carousel.Item key={image.id} className={`carousel-item ${imgIndex === 0 ? 'active' : ''}`}>
                                         <div className="carousel-image-wrapper">
@@ -63,6 +79,18 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="flex justify-center mt-8">
+                    {!showAll && projects.length > 6 && (
+                        <button className="bg-light-secondary dark:bg-dark-secondary text-light-background dark:text-dark-background px-4 py-2 rounded-lg hover:bg-light-accent dark:hover:bg-dark-accent transition" onClick={handleViewMore}>
+                            View More
+                        </button>
+                    )}
+                    {showAll && (
+                        <button className="bg-light-secondary dark:bg-dark-secondary text-light-background dark:text-dark-background px-4 py-2 rounded-lg hover:bg-light-accent dark:hover:bg-dark-accent transition" onClick={handleViewLess}>
+                            View Less
+                        </button>
+                    )}
                 </div>
             </div>
 
