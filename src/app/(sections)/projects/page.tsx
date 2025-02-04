@@ -78,7 +78,7 @@ const Projects: React.FC = () => {
                         <div className="mb-4">
                             <p>{selectedProject.description}</p>
                         </div>
-                        <Carousel id={`carousel-modal`} className="mb-4">
+                        <Carousel id={`carousel-modal`} className="mb-4" interval={null}>
                             {selectedProject.images.map((image, imgIndex) => (
                                 <Carousel.Item key={image.id} className={`carousel-item ${imgIndex === 0 ? 'active' : ''}`}>
                                     <div className="carousel-image-wrapper">
