@@ -221,6 +221,30 @@
         ]
     },
     {
+        "title": "Genetic Algorithms for Pathfinding",
+        "description": "A genetic algorithm implementation for pathfinding in a 2D grid. The algorithm is designed to find the shortest path to complete the entire grid, similar to the Travelling Salesman Problem. The algorithm uses a population of paths, which are then evolved over generations to find the optimal path.",
+        "url": "https://github.com/JakeBiggs/GeneticLawnmowerAgents/blob/main/Optimising%20Chromosome%20Length%20Paper.pdf",
+        "git": "https://github.com/JakeBiggs/GeneticLawnmowerAgents",
+        "skills": [
+            "C++",
+            "Matrices",
+            "Vectors",
+            "3D Geometry"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/lawn.png",
+                "alt": "Agent exploring the lawn"
+            },
+            {
+                "id": "img2",
+                "url": "/images/lawngraph.png",
+                "alt": "Graph of the agents fitness across generations"
+            }
+        ]
+    },
+    {
         "title": "Cryptocurrency Visualiser",
         "description": "This project is designed to gather cryptocurrency prices from the internet using CryptoCompare's API and the UnityWebRequest module. The size of coins change depending on price and allow users to compare the prices of cryptos visually.",
         "url": "https://github.com/JakeBiggs/Cryptocurrency-Visualiser",
