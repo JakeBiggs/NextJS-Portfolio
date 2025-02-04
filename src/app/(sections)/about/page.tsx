@@ -18,7 +18,14 @@ const About: React.FC = () => {
                     </p>
                 </div>
                 <div className="md:w-1/3 mt-8 md:mt-0 md:ml-8 flex justify-center">
-                    <Image src="/images/portrait.JPG" alt="Portrait" className="rounded-full" width={192} height={192} objectFit="cover" />
+                    <Image
+                        src="/images/portrait.JPG"
+                        alt="Portrait"
+                        className="rounded-full"
+                        width={192}
+                        height={192}
+                        style={{ objectFit: 'cover' }}
+                    />
                 </div>
             </div>
         </section>
