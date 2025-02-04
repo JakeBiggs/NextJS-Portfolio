@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import FallingPolygons from "@/app/components/FallingPolygons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Hero() {
     return (
@@ -20,6 +22,14 @@ export default function Hero() {
             >
                 View My Work
             </motion.a>
+            <div className="flex justify-center space-x-4 mb-4 mt-8">
+                <a href="https://github.com/JakeBiggs" target="_blank" rel="noopener noreferrer" className="text-light-secondary  hover:underline">
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                </a>
+                <a href="https://www.linkedin.com/in/jacob-biggs-268423221" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </a>
+            </div>
         </section>
     );
 }
