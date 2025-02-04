@@ -26,6 +26,7 @@ const Contact: React.FC = () => {
     });
 
     useEffect(() => {
+        console.log('Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
         // Initialize EmailJS with your public key
         emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
@@ -41,6 +42,7 @@ const Contact: React.FC = () => {
             document.head.removeChild(script);
         };
     }, []);
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { id, value } = e.target;
