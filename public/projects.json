@@ -1,5 +1,96 @@
 [
     {
+        "title": "Biggs-n-Bognar",
+        "description": "My business website, showcasing our projects and skills. The website is designed to be a single page application with a rundown of our projects with a contact for business enquiries. The website is designed to be responsive and accessible to all users.",
+        "url": "https://www.biggsnbognar.co.uk",
+        "git": "https://github.com/bognar-dev/biggsnbognar",
+        "skills": [
+            "NextJS",
+            "Typescript",
+            "React",
+            "TailwindCSS"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/biggsnbognar.png",
+                "alt": "Homepage of BiggsnBognar"
+            }
+        ]
+    },
+    {
+        "title": "KJ Curtains and Nets",
+        "description": "Website with custom curtain sizing for St.Austell based curtain and haberdashery shop",
+        "url": "https://www.kjcurtainsandnets.co.uk",
+        "git": "https://github.com/Biggs-n-Bognar/kjcurtainsandnets",
+        "skills": [
+            "NextJS",
+            "Typescript",
+            "React",
+            "TailwindCSS"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/kjcurtains.png",
+                "alt": "Homepage of KJ Curtains and Nets"
+            },
+            {
+                "id": "img2",
+                "url": "/images/kjcurtains2.png",
+                "alt": "Custom upholstery webapp"
+            }
+        ]
+    },
+    {
+        "title": "LoRa Mesh Network",
+        "description": "A custom LoRa Mesh Network designed to allow for communication between multiple devices over long distances. The network is encryted using my custom Curve25519 Elliptic Curve Diffie-Hellman key exchange protocol with AES256 to ensure secure communication between devices.",
+        "url": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
+        "git": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
+        "skills": [
+            "C++",
+            "Cyber Security",
+            "Embedded Systems",
+            "LoRa"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/lora.png",
+                "alt": "Heltec LoRa Module in Custom Case"
+            },
+            {
+                "id": "img2",
+                "url": "/images/lora_diagram.png",
+                "alt": "Wiring Diagram for LoRa V3"
+            }
+        ]
+    },
+    {
+        "title": "Custom DEFLATE File Compression",
+        "description": "An optimisation project of the DEFLATE file compression algorithm (the backbone of gzip), designed to combine LZ77 and Huffman Coding. The project aimed at using different data structures and optimisation techniques along with profiling to reduce execution time and memory usage.",
+        "url": "https://github.com/JakeBiggs/DEFLATE-CPP",
+        "git": "https://github.com/JakeBiggs/DEFLATE-CPP",
+        "skills": [
+            "C++",
+            "Data Structures",
+            "Optimisation",
+            "Profiling"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/folder.png",
+                "alt": "Zip icon"
+            },
+            {
+                "id": "img2",
+                "url": "/images/perf.png",
+                "alt": "Perf profiler flamegraph"
+            }
+        ]
+    },
+    {
         "title": "Custom JSON Parser",
         "description": "A proof of concept custom JSON parser for my portfolio website. (Used to display this!)",
         "url": "https://github.com/JakeBiggs/Custom-JSON-Parser/archive/refs/heads/main.zip",

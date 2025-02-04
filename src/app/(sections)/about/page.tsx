@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="bg-gray-800 p-8 text-white">
+        <section id="about" className="bg-light-background_secondary dark:bg-dark-background_secondary text-light-text dark:text-dark-text p-8">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="md:w-2/3">
                     <h2 className="text-3xl font-bold mb-4">About Me</h2>
@@ -33,3 +33,5 @@ const About: React.FC = () => {
 };
 
 export default About;
+
+
