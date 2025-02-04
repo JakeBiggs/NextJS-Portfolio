@@ -1,5 +1,29 @@
 [
     {
+        "title": "Elliptic Curve Diffie-Hellman Key Exchange for ESP32",
+        "description": "An implementation of elliptic curve cryptography (ECC) using Curve25519. It includes functions for key generation, scalar multiplication, and computing shared secrets. The implementation is designed for use with ESP32 microcontrollers.",
+        "url": "https://github.com/JakeBiggs/Curve25519-ESP32",
+        "git": "https://github.com/JakeBiggs/Curve25519-ESP32",
+        "skills": [
+            "C++",
+            "Embedded Systems",
+            "Cyber Security",
+            "ESP32"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/encryption.jpg",
+                "alt": "Placeholder Cyber Security Image"
+            },
+            {
+                "id": "img2",
+                "url": "/images/encryption_image.png",
+                "alt": "Placeholder Cyber Security Image"
+            }
+        ]
+    },
+    {
         "title": "Biggs-n-Bognar",
         "description": "My business website, showcasing our projects and skills. The website is designed to be a single page application with a rundown of our projects with a contact for business enquiries. The website is designed to be responsive and accessible to all users.",
         "url": "https://www.biggsnbognar.co.uk",
@@ -15,6 +39,11 @@
                 "id": "img1",
                 "url": "/images/biggsnbognar.png",
                 "alt": "Homepage of BiggsnBognar"
+            },
+            {
+                "id": "img2",
+                "url": "/images/biggsnbognar2.png",
+                "alt": "Further down BiggsnBognar"
             }
         ]
     },
@@ -44,7 +73,7 @@
     },
     {
         "title": "LoRa Mesh Network",
-        "description": "A custom LoRa Mesh Network designed to allow for communication between multiple devices over long distances. The network is encryted using my custom Curve25519 Elliptic Curve Diffie-Hellman key exchange protocol with AES256 to ensure secure communication between devices.",
+        "description": "A custom LoRa Mesh Network designed to allow for communication between multiple devices over long distances. Implemented on the Heltec LoRa ESP32 v3, it is used to establish a mesh network and send temperature readings between nodes and uploaded to an SQL database if a gateway node is present .The network is encryted using my custom Curve25519 Elliptic Curve Diffie-Hellman key exchange protocol with AES256 to ensure secure communication between devices.",
         "url": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
         "git": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
         "skills": [
