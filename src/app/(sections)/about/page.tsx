@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const About: React.FC = () => {
     return (
@@ -17,7 +18,7 @@ const About: React.FC = () => {
                     </p>
                 </div>
                 <div className="md:w-1/3 mt-8 md:mt-0 md:ml-8 flex justify-center">
-                    <img src="/images/portrait.jpg" alt="Portrait" className="rounded-full w-48 h-48 object-cover" />
+                    <Image src="/images/portrait.jpg" alt="Portrait" className="rounded-full" width={192} height={192} objectFit="cover" />
                 </div>
             </div>
         </section>

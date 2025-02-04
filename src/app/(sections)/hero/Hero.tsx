@@ -8,7 +8,7 @@ export default function Hero() {
         <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 bg-[#1A1A2E] text-white overflow-hidden">
             <FallingPolygons />
             <motion.h1 className="text-5xl font-bold">
-                Hey, I'm <span className="text-[#00ADB5]">Jacob Biggs</span>
+                Hey, I&apos;m <span className="text-[#00ADB5]">Jacob Biggs</span>
             </motion.h1>
             <p className="text-lg mt-4 max-w-2xl text-[#EAEAEA]">
                 I’m a software developer passionate about building modern web applications.
