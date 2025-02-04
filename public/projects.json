@@ -1,5 +1,29 @@
 [
     {
+        "title": "YOLOv8 Pedestrian Detection Model",
+        "description": "In real world applications such as autonomous driving and security surveillance, pedestrian detection is essential for ensuring safety and efficiency. These systems must perform reliably across a diverse range of conditions, from clear daylight images to lower quality visuals caused by noise, low light conditions or greyscale cameras. This project aimed to develop a pedestrian detection model using the YOLOv8 architecture, which is optimised for real-time performance and accuracy across a range of conditions.",
+        "url": "https://github.com/JakeBiggs/Curve25519-ESP32",
+        "git": "https://github.com/JakeBiggs/Curve25519-ESP32",
+        "skills": [
+            "Python",
+            "OpenCV",
+            "YOLOv8",
+            "Object Detection"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/pedestrians.jpg",
+                "alt": "Placeholder Cyber Security Image"
+            },
+            {
+                "id": "img2",
+                "url": "/images/AugmentedvNormal.png",
+                "alt": "Placeholder Cyber Security Image"
+            }
+        ]
+    },
+    {
         "title": "Elliptic Curve Diffie-Hellman Key Exchange for ESP32",
         "description": "An implementation of elliptic curve cryptography (ECC) using Curve25519. It includes functions for key generation, scalar multiplication, and computing shared secrets. The implementation is designed for use with ESP32 microcontrollers.",
         "url": "https://github.com/JakeBiggs/Curve25519-ESP32",
@@ -125,9 +149,9 @@
         "url": "https://github.com/JakeBiggs/Custom-JSON-Parser/archive/refs/heads/main.zip",
         "git": "https://github.com/JakeBiggs/Custom-JSON-Parser",
         "skills": [
-            "Javascript",
+            "JavaScript",
             "JSON",
-            "Compilers",
+            "EDI",
             "Data Structures"
         ],
         "images": [
@@ -221,7 +245,7 @@
         ]
     },
     {
-        "title": "SpaceGame - Sensor Fusion",
+        "title": "MPU6050 Gyroscope and Accelerometer Game with Kalman Filter",
         "description": "Space Game is a space invader-style game, where the player navigates a spaceship using gyroscope and accelerometer data. The goal of the game is to avoid hazards, while shooting oncoming asteroids using a button. The game is designed to make the player think about orientation and maintain control over the ship. The use of real-world sensor data adds an immersive element to the gameplay that provides a unique experience for the player.",
         "url": "https://unitygroup16.itch.io/ceilidh",
         "git": "https://github.com/JakeBiggs/Caelidh",
