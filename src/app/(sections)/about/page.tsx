@@ -13,8 +13,14 @@ const About: React.FC = () => {
                     <p className="text-lg mb-4">
                         With a strong background in computer science and a keen eye for design, I strive to build applications that are not only functional but also visually appealing. I am always eager to learn new technologies and improve my skills.
                     </p>
+                    <p className="text-lg mb-4">
+                        My work with LoRa and ESP32 has allowed me to explore the fascinating world of IoT, where I have designed and implemented systems that require low power consumption and long-range communication. I enjoy the challenge of optimising embedded code to achieve the best performance and reliability.
+                    </p>
+                    <p className="text-lg mb-4">
+                        On the side, I run Biggs n Bognar Web Agency with my friend and colleague Niklas. Together, we provide web development services to individual clients and small businesses, helping them build and maintain their online presence with modern and effective web solutions.
+                    </p>
                     <p className="text-lg">
-                        When I&apos;m not coding, you can find me exploring new places, reading tech blogs, or working on personal projects. I am always open to new opportunities and collaborations.
+                        When I&apos;m not coding, you can find me exploring new places, playing Piano or Drums, and working on personal projects. I am always open to new opportunities and collaborations.
                     </p>
                 </div>
                 <div className="md:w-1/3 mt-8 md:mt-0 md:ml-8 flex justify-center">
