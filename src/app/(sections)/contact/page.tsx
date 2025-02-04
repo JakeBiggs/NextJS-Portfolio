@@ -2,10 +2,19 @@
 
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 declare global {
     interface Window {
-        grecaptcha: any;
+        grecaptcha: {
+            enterprise: {
+                ready: (callback: () => void) => void;
+                execute: (siteKey: string, options: { action: string }) => Promise<string>;
+            };
+        };
     }
 }
 
@@ -15,7 +24,6 @@ const Contact: React.FC = () => {
         email: '',
         message: '',
     });
-    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
     useEffect(() => {
         // Initialize EmailJS with your public key
@@ -48,7 +56,6 @@ const Contact: React.FC = () => {
         // Execute reCAPTCHA and get the token
         window.grecaptcha.enterprise.ready(async () => {
             const token = await window.grecaptcha.enterprise.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!, { action: 'submit' });
-            setRecaptchaToken(token);
 
             if (!token) {
                 alert('Please complete the reCAPTCHA.');
@@ -71,7 +78,6 @@ const Contact: React.FC = () => {
                     console.log('Email sent successfully:', result.text);
                     alert('Email sent successfully!');
                     setFormData({ name: '', email: '', message: '' });
-                    setRecaptchaToken(null);
                 })
                 .catch((error) => {
                     console.error('Error sending email:', error);
@@ -85,8 +91,19 @@ const Contact: React.FC = () => {
             <div className="container mx-auto">
                 <h2 className="text-3xl font-bold mb-4">Contact</h2>
                 <p className="text-lg mb-4">
-                    Feel free to reach out to me via email at <a href="mailto:your-email@example.com" className="text-blue-400 hover:underline">your-email@example.com</a> or use the contact form below.
+                    If you would like to get in touch, feel free to send me an email or connect with me on GitHub and LinkedIn.
                 </p>
+                <div className="flex justify-center space-x-4 mb-4">
+                    <a href="mailto:JakeJBiggs1@gmail.com" className="text-blue-400 hover:underline">
+                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                    </a>
+                    <a href="https://github.com/JakeBiggs" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jacob-biggs-268423221" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                </div>
                 <form className="bg-gray-900 p-4 rounded-lg shadow-lg" onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-lg mb-2">Name</label>
