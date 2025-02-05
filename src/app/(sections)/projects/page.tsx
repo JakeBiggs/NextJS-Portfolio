@@ -21,32 +21,37 @@ const Projects: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [showAll, setShowAll] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
 
     useEffect(() => {
         fetch('/projects.json')
             .then((response) => response.json())
             .then((data) => {
                 setProjects(data);
-                updateVisibleProjects(data);
+                updateVisibleProjects(data, window.innerWidth);
             })
             .catch((error) => console.error('Error fetching projects:', error));
     }, []);
 
     useEffect(() => {
         const handleResize = () => {
-            updateVisibleProjects(projects);
+            if (window.innerWidth !== windowWidth) {
+                setWindowWidth(window.innerWidth);
+                updateVisibleProjects(projects, window.innerWidth);
+            }
         };
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, [projects]);
+    }, [projects, windowWidth]);
 
     useEffect(() => {
         setIsMounted(true);
+        setWindowWidth(window.innerWidth);
     }, []);
 
-    const updateVisibleProjects = (projects: Project[]) => {
-        const isMobile = window.innerWidth < 768;
+    const updateVisibleProjects = (projects: Project[], width: number) => {
+        const isMobile = width < 768;
         const numberOfProjects = isMobile ? 4 : 6;
         setVisibleProjects(projects.slice(0, numberOfProjects));
     };
@@ -72,7 +77,7 @@ const Projects: React.FC = () => {
 
     const handleViewLess = () => {
         setShowAll(false);
-        updateVisibleProjects(projects);
+        updateVisibleProjects(projects, windowWidth);
     };
 
     return (
@@ -101,7 +106,7 @@ const Projects: React.FC = () => {
                     ))}
                 </div>
                 <div className="flex justify-center mt-8">
-                    {isMounted && !showAll && projects.length > (window.innerWidth < 768 ? 4 : 6) && (
+                    {isMounted && !showAll && projects.length > (windowWidth < 768 ? 4 : 6) && (
                         <button className="bg-light-secondary dark:bg-dark-secondary text-light-background dark:text-dark-background px-4 py-2 rounded-lg hover:bg-light-accent dark:hover:bg-dark-accent transition" onClick={handleViewMore}>
                             View More
                         </button>
