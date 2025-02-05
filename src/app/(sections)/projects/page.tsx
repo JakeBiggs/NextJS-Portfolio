@@ -20,16 +20,36 @@ const Projects: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [showModal, setShowModal] = useState(false);
     const [showAll, setShowAll] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         fetch('/projects.json')
             .then((response) => response.json())
             .then((data) => {
                 setProjects(data);
-                setVisibleProjects(data.slice(0, 6)); // Show only the first 6 projects initially
+                updateVisibleProjects(data);
             })
             .catch((error) => console.error('Error fetching projects:', error));
     }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            updateVisibleProjects(projects);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [projects]);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    const updateVisibleProjects = (projects: Project[]) => {
+        const isMobile = window.innerWidth < 768;
+        const numberOfProjects = isMobile ? 4 : 6;
+        setVisibleProjects(projects.slice(0, numberOfProjects));
+    };
 
     const handleProjectClick = (project: Project) => {
         setSelectedProject(project);
@@ -52,7 +72,7 @@ const Projects: React.FC = () => {
 
     const handleViewLess = () => {
         setShowAll(false);
-        setVisibleProjects(projects.slice(0, 6));
+        updateVisibleProjects(projects);
     };
 
     return (
@@ -81,7 +101,7 @@ const Projects: React.FC = () => {
                     ))}
                 </div>
                 <div className="flex justify-center mt-8">
-                    {!showAll && projects.length > 6 && (
+                    {isMounted && !showAll && projects.length > (window.innerWidth < 768 ? 4 : 6) && (
                         <button className="bg-light-secondary dark:bg-dark-secondary text-light-background dark:text-dark-background px-4 py-2 rounded-lg hover:bg-light-accent dark:hover:bg-dark-accent transition" onClick={handleViewMore}>
                             View More
                         </button>
