@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
                     <a href="https://github.com/JakeBiggs" target="_blank" rel="noopener noreferrer" className="text-light-secondary  hover:underline">
                         <FontAwesomeIcon icon={faGithub} size="2x" />
                     </a>
-                    <a href="https://www.linkedin.com/in/jacob-biggs-268423221" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
+                    <a href="hhttps://www.linkedin.com/in/jacobjbiggs/" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
                         <FontAwesomeIcon icon={faLinkedin} size="2x" />
                     </a>
                 </div>

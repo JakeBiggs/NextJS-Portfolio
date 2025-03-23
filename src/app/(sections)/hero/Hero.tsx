@@ -13,7 +13,7 @@ export default function Hero() {
                 Hey, I&apos;m <span className="text-light-secondary dark:text-dark-secondary">Jacob Biggs</span>
             </motion.h1>
             <p className="text-lg mt-4 max-w-2xl text-light-primary dark:text-dark-primary">
-                I’m a software developer passionate about building modern web applications.
+                I’m a software developer passionate about building modern web applications and embedded systems.
             </p>
             <motion.a
                 href="#projects"
@@ -26,7 +26,7 @@ export default function Hero() {
                 <a href="https://github.com/JakeBiggs" target="_blank" rel="noopener noreferrer" className="text-light-secondary  hover:underline">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
-                <a href="https://www.linkedin.com/in/jacob-biggs-268423221" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
+                <a href="https://www.linkedin.com/in/jacobjbiggs/" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
             </div>
