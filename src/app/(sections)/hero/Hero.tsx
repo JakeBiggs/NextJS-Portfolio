@@ -12,7 +12,7 @@ export default function Hero() {
             <motion.h1 className="text-5xl font-bold">
                 Hey, I&apos;m <span className="text-light-secondary dark:text-dark-secondary">Jacob Biggs</span>
             </motion.h1>
-            <p className="text-lg mt-4 max-w-2xl text-light-primary dark:text-dark-primary">
+            <p className="text-lg mt-4 max-w-3xl text-light-primary dark:text-dark-primary text-center leading-relaxed whitespace-nowrap ">
                 I’m a software developer passionate about building modern web applications and embedded systems.
             </p>
             <motion.a
@@ -23,10 +23,20 @@ export default function Hero() {
                 View My Work
             </motion.a>
             <div className="flex justify-center space-x-4 mb-4 mt-8">
-                <a href="https://github.com/JakeBiggs" target="_blank" rel="noopener noreferrer" className="text-light-secondary  hover:underline">
+                <a
+                    href="https://github.com/JakeBiggs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent transition"
+                >
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
-                <a href="https://www.linkedin.com/in/jacobjbiggs/" target="_blank" rel="noopener noreferrer" className="text-light-secondary hover:underline">
+                <a
+                    href="https://www.linkedin.com/in/jacobjbiggs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent transition"
+                >
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
             </div>
