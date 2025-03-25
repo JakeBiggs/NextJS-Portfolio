@@ -15,7 +15,7 @@ export default function Hero() {
             <motion.h1 className="text-5xl font-bold z-10">
                 Hey, I&apos;m <span className="text-light-secondary dark:text-dark-secondary">Jacob Biggs</span>
             </motion.h1>
-            <p className="text-lg mt-4 max-w-3xl text-light-primary dark:text-dark-primary text-center leading-relaxed whitespace-nowrap z-10">
+            <p className="text-lg mt-4 max-w-3xl text-light-primary dark:text-dark-primary text-center leading-relaxed lg:whitespace-nowrap z-10 sm:text-wrap md:text-wrap">
                 I’m a software developer passionate about building modern web applications and embedded systems.
             </p>
             <motion.a
