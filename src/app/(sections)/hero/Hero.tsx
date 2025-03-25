@@ -12,7 +12,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <FallingPolygons />
             </div>
-            <motion.h1 className="text-5xl font-bold z-10">
+            <motion.h1 className="md:text-5xl font-bold z-10 ">
                 Hey, I&apos;m <span className="text-light-secondary dark:text-dark-secondary">Jacob Biggs</span>
             </motion.h1>
             <p className="text-lg mt-4 max-w-3xl text-light-primary dark:text-dark-primary text-center leading-relaxed lg:whitespace-nowrap z-10 sm:text-wrap md:text-wrap">
