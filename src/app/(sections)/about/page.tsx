@@ -7,22 +7,32 @@ const About: React.FC = () => {
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="md:w-2/3">
                     <h2 className="text-3xl font-bold mb-4">About Me</h2>
+
                     <p className="text-lg mb-4">
-                        I am a passionate software developer with experience in building modern web applications using technologies like Next.js, TypeScript, and Tailwind CSS. I love creating sleek and efficient solutions to complex problems.
+                        I’m a full-stack software developer specialising in building modern, reliable applications across the .NET ecosystem. In my current role, I work in a small, fast-moving InsurTech team where I handle everything from debugging legacy systems to designing and delivering full end-to-end features.
                     </p>
+
                     <p className="text-lg mb-4">
-                        With a strong background in computer science and a keen eye for design, I strive to build applications that are not only functional but also visually appealing. I am always eager to learn new technologies and improve my skills.
+                        Alongside application development, I’m involved in broader technical operations; networking, server management, and long-term architectural planning, which gives me a practical understanding of how systems behave in real-world environments.
                     </p>
+
                     <p className="text-lg mb-4">
-                        My work with LoRa and ESP32 has allowed me to explore the fascinating world of IoT, where I have designed and implemented systems that require low power consumption and long-range communication. I enjoy the challenge of optimising embedded code to achieve the best performance and reliability.
+                        I bring a strong background in computer science, as well as experience with modern front-end technologies like TypeScript, Next.js, and Tailwind CSS. This combination helps me build applications that feel clean, intuitive, and visually refined, even within the .NET stack.
                     </p>
+
                     <p className="text-lg mb-4">
-                        On the side, I run Biggs n Bognar Web Agency with my friend and colleague Niklas. Together, we provide web development services to individual clients and small businesses, helping them build and maintain their online presence with modern and effective web solutions.
+                        I’ve also worked extensively with LoRa and ESP32, building low-power, long-range IoT systems and optimising embedded code for reliability and performance. I enjoy the challenge of solving problems across both software and hardware layers.
                     </p>
+
+                    <p className="text-lg mb-4">
+                        Outside of my full-time role, I run Biggs n Bognar Web Agency with my colleague Niklas. We help individuals and small businesses modernise their online presence through bespoke, performant web applications and ongoing technical support.
+                    </p>
+
                     <p className="text-lg">
-                        When I&apos;m not coding, you can find me exploring new places, playing Piano or Drums, and working on personal projects. I am always open to new opportunities and collaborations.
+                        When I&apos;m not coding, you can usually find me playing piano or drums, travelling, or building personal projects. I’m always open to new opportunities and collaborations.
                     </p>
                 </div>
+
                 <div className="md:w-1/3 mt-8 md:mt-0 md:ml-8 flex justify-center">
                     <Image
                         src="/images/portrait.JPG"
@@ -39,5 +49,3 @@ const About: React.FC = () => {
 };
 
 export default About;
-
-
