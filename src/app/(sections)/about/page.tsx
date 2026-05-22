@@ -25,7 +25,7 @@ const About: React.FC = () => {
                     </p>
 
                     <p className="text-lg mb-4">
-                        Outside of my full-time role, I run Biggs n Bognar Web Agency with my colleague Niklas. We help individuals and small businesses modernise their online presence through bespoke, performant web applications and ongoing technical support.
+                        Outside of my full-time role, I run Biggs n Bognar Web Agency with my colleague and co-founder. We help individuals and small businesses modernise their online presence through bespoke, performant web applications and ongoing technical support.
                     </p>
 
                     <p className="text-lg">

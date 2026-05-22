@@ -4,6 +4,7 @@ import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 interface Project {
     title: string;
@@ -140,9 +141,15 @@ const Projects: React.FC = () => {
                                 </Carousel.Item>
                             ))}
                         </Carousel>
-                        <a href={selectedProject.git} className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent mt-2 block">
-                            <FontAwesomeIcon icon={faGithub} size="2x" />
-                        </a>
+                        <div className="flex gap-3">
+                            {selectedProject.url && (<a href={selectedProject.url} className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent mt-2 block">
+                                <FontAwesomeIcon icon={faGlobe} size="2x" />
+                            </a>)}
+
+                            {selectedProject.git && (<a href={selectedProject.git} className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent mt-2 block">
+                                <FontAwesomeIcon icon={faGithub} size="2x" />
+                            </a>)}
+                        </div>
                         <div className="mt-4 flex flex-wrap gap-2">
                             {selectedProject.skills.map((skill, skillIndex) => (
                                 <span key={skillIndex} className="badge bg-light-accent dark:bg-slate-600 px-3 py-1 text-sm">{skill}</span>

@@ -1,8 +1,30 @@
 [
     {
+        "title": "FuelTank - Insurance Platform",
+        "description": "FuelTank is a comprehensive insurance brokerage platform built with .NET 6+ and Blazor, designed to streamline the insurance quoting, underwriting, and policy management process. The platform integrates with insurers in both open market and delegated authority schemes to provide policy wordings, schedules, and mid-term adjustment workflows. Features include an insurer certified risk pricing engine, underwriting case management, CRM, sanctions checking via OpenSanctions API, client email processing, real-time PDF generation and more. Also, if you're an SME owner reading this then hit these guys up for some great insurance",
+        "url": "https://reallyhonest.co",
+        "skills": [
+            "C# / .NET 6+",
+            "Blazor",
+            "SQL Server",
+            "Regulated Software",
+            ".NET Identity Framework",
+            "Azure",
+            "REST APIs",
+            "Entity Framework Core & Dapper (ORMs)",
+            "DevOps"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/fuelled.png",
+                "alt": "The Team"
+            }
+        ]
+    },
+    {
         "title": "YOLOv8 Pedestrian Detection Model",
         "description": "In real world applications such as autonomous driving and security surveillance, pedestrian detection is essential for ensuring safety and efficiency. These systems must perform reliably across a diverse range of conditions, from clear daylight images to lower quality visuals caused by noise, low light conditions or greyscale cameras. This project aimed to develop a pedestrian detection model using the YOLOv8 architecture, which is optimised for real-time performance and accuracy across a range of conditions.",
-        "url": "https://github.com/JakeBiggs/Curve25519-ESP32",
         "git": "https://github.com/JakeBiggs/Curve25519-ESP32",
         "skills": [
             "Python",
@@ -26,7 +48,6 @@
     {
         "title": "Elliptic Curve Diffie-Hellman Key Exchange for ESP32",
         "description": "An implementation of elliptic curve cryptography (ECC) using Curve25519. It includes functions for key generation, scalar multiplication, and computing shared secrets. The implementation is designed for use with ESP32 microcontrollers.",
-        "url": "https://github.com/JakeBiggs/Curve25519-ESP32",
         "git": "https://github.com/JakeBiggs/Curve25519-ESP32",
         "skills": [
             "C++",
@@ -98,7 +119,6 @@
     {
         "title": "LoRa Mesh Network",
         "description": "A custom LoRa Mesh Network designed to allow for communication between multiple devices over long distances. Implemented on the Heltec LoRa ESP32 v3, it is used to establish a mesh network and send temperature readings between nodes and uploaded to an SQL database if a gateway node is present .The network is encryted using my custom Curve25519 Elliptic Curve Diffie-Hellman key exchange protocol with AES256 to ensure secure communication between devices.",
-        "url": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
         "git": "https://github.com/JakeBiggs/LoRa-Mesh-WSN",
         "skills": [
             "C++",
@@ -122,7 +142,6 @@
     {
         "title": "Custom DEFLATE File Compression",
         "description": "An optimisation project of the DEFLATE file compression algorithm (the backbone of gzip), designed to combine LZ77 and Huffman Coding. The project aimed at using different data structures and optimisation techniques along with profiling to reduce execution time and memory usage.",
-        "url": "https://github.com/JakeBiggs/DEFLATE-CPP",
         "git": "https://github.com/JakeBiggs/DEFLATE-CPP",
         "skills": [
             "C++",
@@ -199,7 +218,6 @@
     {
         "title": "Raycaster with Phong Shading",
         "description": "A basic raycaster implementation in C++ with added Phong Shading for Diffusion, Specular and Ambient Lighting models",
-        "url": "https://unitygroup16.itch.io/ceilidh",
         "git": "https://github.com/JakeBiggs/A-basic-Raycaster",
         "skills": [
             "C++",
@@ -247,7 +265,6 @@
     {
         "title": "Cryptocurrency Visualiser",
         "description": "This project is designed to gather cryptocurrency prices from the internet using CryptoCompare's API and the UnityWebRequest module. The size of coins change depending on price and allow users to compare the prices of cryptos visually.",
-        "url": "https://github.com/JakeBiggs/Cryptocurrency-Visualiser",
         "git": "https://github.com/JakeBiggs/Cryptocurrency-Visualiser",
         "skills": [
             "C#",
@@ -271,8 +288,7 @@
     {
         "title": "MPU6050 Gyroscope and Accelerometer Game with Kalman Filter",
         "description": "Space Game is a space invader-style game, where the player navigates a spaceship using gyroscope and accelerometer data. The goal of the game is to avoid hazards, while shooting oncoming asteroids using a button. The game is designed to make the player think about orientation and maintain control over the ship. The use of real-world sensor data adds an immersive element to the gameplay that provides a unique experience for the player.",
-        "url": "https://unitygroup16.itch.io/ceilidh",
-        "git": "https://github.com/JakeBiggs/Caelidh",
+        "git": "https://github.com/JakeBiggs/SpaceGame---An-MPU6050-Sensor-Fusion-Game",
         "skills": [
             "C++",
             "Embedded Systems",
