@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
                 <div className="md:w-1/3 mt-8 md:mt-0 md:ml-8 flex justify-center">
                     <Image
-                        src="/images/portrait.jpg"
+                        src="/images/portrait_temp.jpg"
                         alt="Portrait"
                         className="rounded-full border-4 border-light-accent dark:border-dark-accent"
                         width={192}
