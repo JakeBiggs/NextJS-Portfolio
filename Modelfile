@@ -1,0 +1,12 @@
+# Pull the exact Qwen 3.5 9B model from the official Ollama library
+FROM qwen3.5:9b
+
+# Allocate a 32K context window (perfect for Claude Code repos on 16GB VRAM)
+PARAMETER num_ctx 32768
+
+# Force 16-bit key-value pairs to keep memory low and fast
+PARAMETER f16_kv true
+
+# Keep the temperature low to force deterministic, accurate code fixes
+PARAMETER temperature 0.2
+PARAMETER top_p 0.95

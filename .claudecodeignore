@@ -1,0 +1,4 @@
+# Block deep dependencies
+node_modules/
+.next/
+dist/

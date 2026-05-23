@@ -33,6 +33,9 @@ const Navbar: React.FC = () => {
                     <Link href="#contact" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
                         Contact
                     </Link>
+                    <Link href="/game" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
+                        Game
+                    </Link>
                 </div>
                 <ThemeToggle />
             </div>
