@@ -10,7 +10,7 @@ export default function GamePage() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [wave, setWave] = useState(1)
-  const requestRef = useRef<number>()
+  const requestRef = useRef<number>(0)
   const isPlayingRef = useRef(false)
   const gameOverRef = useRef(false)
   const pausedRef = useRef(false)
