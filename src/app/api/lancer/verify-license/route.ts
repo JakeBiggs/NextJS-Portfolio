@@ -14,6 +14,17 @@ import { NextResponse } from 'next/server';
 
 const LS_URL = 'https://api.lemonsqueezy.com/v1/licenses/validate';
 
+// CORS headers — allows Chrome extensions (any ID) and web apps
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 export async function POST(request: Request) {
   let body: { key?: string };
   try {
@@ -21,14 +32,14 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json(
       { valid: false, tier: 'free', error: 'Invalid request body' },
-      { status: 400 }
+      { status: 400, headers: corsHeaders }
     );
   }
 
   if (!body.key || typeof body.key !== 'string') {
     return NextResponse.json(
       { valid: false, tier: 'free', error: 'License key required' },
-      { status: 400 }
+      { status: 400, headers: corsHeaders }
     );
   }
 
@@ -46,15 +57,21 @@ export async function POST(request: Request) {
     const data = await response.json();
 
     if (data.valid === true) {
-      return NextResponse.json({ valid: true, tier: 'premium' });
+      return NextResponse.json(
+        { valid: true, tier: 'premium' },
+        { headers: corsHeaders }
+      );
     }
 
-    return NextResponse.json({ valid: false, tier: 'free' });
+    return NextResponse.json(
+      { valid: false, tier: 'free' },
+      { headers: corsHeaders }
+    );
   } catch (error) {
     console.error('[Lancer] Lemon Squeezy API call failed:', error);
     return NextResponse.json(
       { valid: false, tier: 'free', error: 'Service unavailable' },
-      { status: 503 }
+      { status: 503, headers: corsHeaders }
     );
   }
 }
