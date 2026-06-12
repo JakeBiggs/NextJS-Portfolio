@@ -1,5 +1,39 @@
 [
     {
+        "title": "Lancer: PDF Invoices, Quotes & Documents",
+        "description": "Professional PDF quotes, invoices & receipts generated directly in your browser. No signup, no servers, no data collection. Features multi-currency support with regional tax configurations, custom branding, and a one-time purchase license. Built with WXT, React, TypeScript, and pdf-lib.",
+        "url": "",
+        "skills": [
+            "WXT",
+            "React",
+            "TypeScript",
+            "TailwindCSS",
+            "pdf-lib"
+        ],
+        "images": [
+            {
+                "id": "img1",
+                "url": "/images/lancer1.png",
+                "alt": "Lancer extension popup"
+            },
+            {
+                "id": "img2",
+                "url": "/images/lancer2.png",
+                "alt": "Lancer invoice generation"
+            },
+            {
+                "id": "img3",
+                "url": "/images/lancer3.png",
+                "alt": "Lancer features"
+            },
+            {
+                "id": "img4",
+                "url": "/images/lancer4.png",
+                "alt": "Lancer tax configuration"
+            }
+        ]
+    },
+    {
         "title": "FuelTank - Insurance Platform",
         "description": "FuelTank is a comprehensive insurance brokerage platform built with .NET 6+ and Blazor, designed to streamline the insurance quoting, underwriting, and policy management process. The platform integrates with insurers in both open market and delegated authority schemes to provide policy wordings, schedules, and mid-term adjustment workflows. Features include an insurer certified risk pricing engine, underwriting case management, CRM, sanctions checking via OpenSanctions API, client email processing, real-time PDF generation and more. Also, if you're an SME owner reading this then hit these guys up for some great insurance",
         "url": "https://reallyhonest.co",

@@ -47,7 +47,7 @@ export default function LancerPrivacyPage() {
 
       <hr className="my-4" />
       <p className="text-muted small">
-        Questions? Contact <a href="mailto:hello@jacobbiggs.co.uk">hello@jacobbiggs.co.uk</a>
+        Questions? Contact <a href="mailto:jakejbiggs1@gmail.com">me here</a>
       </p>
     </div>
   );

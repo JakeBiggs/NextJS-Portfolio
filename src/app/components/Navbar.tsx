@@ -24,16 +24,19 @@ const Navbar: React.FC = () => {
                     </button>
                 </div>
                 <div className={`md:flex items-center ${isOpen ? 'block' : 'hidden'}`}>
-                    <Link href="#about" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 mr-4 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
+                    <Link href="/#about" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 mr-4 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
                         About
                     </Link>
-                    <Link href="#projects" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 mr-4 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
+
+                    <Link href="/#projects" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 mr-4 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
                         Projects
                     </Link>
-                    <Link href="#contact" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
+                    <Link href="/#contact" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
                         Contact
                     </Link>
-
+                    <Link href="/lancer" className="block mt-4 md:inline-block md:mt-0 text-gray-800 dark:text-gray-200 mr-4 no-underline hover:text-light-secondary dark:hover:text-dark-secondary transition duration-300">
+                        Lancer
+                    </Link>
                 </div>
                 <ThemeToggle />
             </div>
